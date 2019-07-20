@@ -12,15 +12,16 @@ source ~/.vim/vim_config/qiushao.vim
 PlugInstall
 ```
 
-4. copy ~/.vim/vim_config/coc-settings.json to ~/.vim
+4. mkdir .vimproject mark this dir is a vim project, so leaderf will auto gen gtags
 
-5. copy ~/.vim/vim_config/CMakeLists.txt to your project dir, then run
+5. copy ~/.vim/vim_config/coc-settings.json to ~/.vim
+
+6. copy ~/.vim/vim_config/CMakeLists.txt to your project dir, and modify the config, then run
 ```
-mkdir build
-cd build
+mkdir .vimproject
+cd .vimproject
 cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=release -DCMAKE_EXPORT_COMPILE_COMMANDS=YES
 cp compile_commands.json ..
 ```
 
-6. mkdir .vimproject mark this dir is a vim project, so leaderf will auto gen gtags
 
