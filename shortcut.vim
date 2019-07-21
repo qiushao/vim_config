@@ -41,6 +41,11 @@ vnoremap p "0p
 " open file base on file name
 let g:Lf_GtagsAutoGenerate = 1
 let g:Lf_RootMarkers = ['.vimproject']
+let g:Lf_WindowHeight = 0.3
+let g:Lf_WildIgnore = {
+			\ 'dir': ['kernel','build','.vimproject','ccache','out'],
+			\ 'file': ['*.so']
+			\}
 nnoremap ,, :Leaderf file --nameOnly<cr> 
 nnoremap <leader>fb :Leaderf buffer --nameOnly<cr> 
 nnoremap <leader>ff :Leaderf function --nameOnly<cr> 
