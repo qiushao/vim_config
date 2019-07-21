@@ -4,6 +4,10 @@ inoremap ;; <esc>
 "插入一个空行
 nnoremap <leader><cr> o<Esc>
 
+"复制一次，重复粘贴
+nnoremap <leader>p "0p
+vnoremap <leader>p "0p
+
 "保存与退出
 nnoremap <leader>wa :wa<cr>
 nnoremap <leader>qa :qa<cr>
@@ -43,9 +47,9 @@ nnoremap ,, :Leaderf file --nameOnly<cr>
 nnoremap <leader>fb :Leaderf buffer --nameOnly<cr> 
 nnoremap <leader>ff :Leaderf function --nameOnly<cr> 
 nnoremap <leader>fl :Leaderf line --cword --stayOpen --regexMode<cr><tab>
+nnoremap <leader>fs :Leaderf rg --cword --stayOpen --regexMode<cr><tab>
 nnoremap <leader>fr :<C-U><C-R>=printf("Leaderf! gtags -r %s --stayOpen --auto-jump", expand("<cword>"))<CR><CR>
 nnoremap <leader>fd :<C-U><C-R>=printf("Leaderf! gtags -d %s --stayOpen --auto-jump", expand("<cword>"))<CR><CR>
-nnoremap <leader>fs :<C-U><C-R>=printf("Leaderf! gtags -g %s --stayOpen --auto-jump", expand("<cword>"))<CR><CR>
 " LeaderF settings end
 
 " NERDComment settings start
