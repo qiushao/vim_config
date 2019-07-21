@@ -4,10 +4,6 @@ inoremap ;; <esc>
 "插入一个空行
 nnoremap <leader><cr> o<Esc>
 
-"复制一次，重复粘贴
-nnoremap <leader>p "0p
-vnoremap <leader>p "0p
-
 "保存与退出
 nnoremap <leader>wa :wa<cr>
 nnoremap <leader>qa :qa<cr>
@@ -36,6 +32,8 @@ nnoremap cp :cp<cr>
 nnoremap <leader>hh 1000h
 nnoremap <leader>ll 1000l
 
+"复制一次，重复粘贴
+vnoremap p "0p
 
 """""""""""""""" plugin shortcut settings start """""""""""""""""""""""""""""""""
 
