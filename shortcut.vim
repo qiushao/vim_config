@@ -46,9 +46,10 @@ let g:Lf_WildIgnore = {
 			\ 'dir': ['kernel','build','.vimproject','ccache','out'],
 			\ 'file': ['*.so']
 			\}
-nnoremap ,, :Leaderf file --nameOnly<cr> 
-nnoremap <leader>fb :Leaderf buffer --nameOnly<cr> 
-nnoremap <leader>ff :Leaderf function --nameOnly<cr> 
+nnoremap ,, :Leaderf file --nameOnly<cr>
+nnoremap <leader>fb :Leaderf buffer --nameOnly<cr>
+nnoremap <leader>ff :Leaderf function --nameOnly<cr>
+nnoremap <leader>ft :Leaderf gtags --nameOnly<cr>
 nnoremap <leader>fl :Leaderf line --cword --stayOpen --regexMode<cr><tab>
 nnoremap <leader>fs :Leaderf rg --cword --stayOpen --regexMode<cr><tab>
 nnoremap <leader>fr :<C-U><C-R>=printf("Leaderf! gtags -r %s --stayOpen --auto-jump", expand("<cword>"))<CR><CR>
@@ -96,10 +97,11 @@ endfunction
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " Remap keys for gotos
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+nmap <leader>gd <Plug>(coc-definition)
+nmap <leader>gy <Plug>(coc-type-definition)
+nmap <leader>gi <Plug>(coc-implementation)
+nmap <leader>gr <Plug>(coc-references)
+nmap <leader>gf :<C-u>CocList -I symbols<cr>
 " coc.vim settings end
 
 """""""""""""""" plugin shortcut settings end """""""""""""""""""""""""""""""""
