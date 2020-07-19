@@ -39,6 +39,7 @@ vnoremap p "0p
 
 " LeaderF settings start
 " open file base on file name
+let g:Lf_ShowDevIcons = 0
 let g:Lf_GtagsAutoGenerate = 1
 let g:Lf_RootMarkers = ['.vimproject']
 let g:Lf_WindowHeight = 0.3
