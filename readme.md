@@ -41,7 +41,7 @@ min@470p:~/.vim/vim_config$
 以下所有快捷键都是指在 vim `命令模式` 下
 
 ### 查找所有文件
-LeaderF 插件提供的功能，目前配置为 `;,,` 快捷键触发，
+LeaderF 插件提供的功能，目前配置为 `,,` 快捷键触发，
 在 shortcut.vim 中配置如下
 ```
 nnoremap ,, :Leaderf file --nameOnly<cr>
