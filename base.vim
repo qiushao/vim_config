@@ -13,7 +13,7 @@ set ignorecase smartcase "搜索时忽略大小写
 set mps+=<:> "设置高亮匹配的括号
 set incsearch "增量搜索
 set hlsearch "高亮搜索
-set mouse=a "启用鼠标
+"set mouse=a "启用鼠标
 set smartindent "智能缩进
 set backspace=indent,eol,start "按backspace 时的
 set cmdheight=1 "显示命令行的区域的高度

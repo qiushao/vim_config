@@ -47,17 +47,26 @@ let g:Lf_WildIgnore = {
 			\ 'dir': ['kernel','build','.vimproject','ccache','out'],
 			\ 'file': ['*.so']
 			\}
+
+" 查找所有文件
 nnoremap ,, :Leaderf file --nameOnly<cr>
+" 查找已经打开的文件
 nnoremap <leader>fb :Leaderf buffer --nameOnly<cr>
+" 在当前文件中查找函数
 nnoremap <leader>ff :Leaderf function --nameOnly<cr>
+" 在所有文件中查找函数
 nnoremap <leader>ft :Leaderf gtags --nameOnly<cr>
+" 跳转到函数定义
+nnoremap <leader>fd :<C-U><C-R>=printf("Leaderf! gtags -d %s --stayOpen --auto-jump", expand("<cword>"))<CR><CR>
+" 查找函数引用
+nnoremap <leader>fr :<C-U><C-R>=printf("Leaderf! gtags -r %s --stayOpen --auto-jump", expand("<cword>"))<CR><CR>
+" 相当于 grep -nr <当前光标下的单词>
 nnoremap <leader>fl :Leaderf line --cword --stayOpen --regexMode<cr><tab>
 nnoremap <leader>fs :Leaderf rg --cword --stayOpen --regexMode<cr><tab>
-nnoremap <leader>fr :<C-U><C-R>=printf("Leaderf! gtags -r %s --stayOpen --auto-jump", expand("<cword>"))<CR><CR>
-nnoremap <leader>fd :<C-U><C-R>=printf("Leaderf! gtags -d %s --stayOpen --auto-jump", expand("<cword>"))<CR><CR>
 " LeaderF settings end
 
 " NERDComment settings start
+" 注释当前行
 nnoremap cm :call NERDComment(0, "toggle")<cr>
 " NERDComment settings end
 
