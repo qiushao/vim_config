@@ -70,49 +70,5 @@ nnoremap <leader>fs :Leaderf rg --cword --stayOpen --regexMode<cr><tab>
 nnoremap cm :call NERDComment(0, "toggle")<cr>
 " NERDComment settings end
 
-
-
-" coc.vim settings start
-" if hidden is not set, TextEdit might fail.
-set hidden
-
-" Some servers have issues with backup files, see #649
-set nobackup
-set nowritebackup
-
-" Better display for messages
-set cmdheight=2
-
-" You will have bad experience for diagnostic messages when it's default 4000.
-set updatetime=300
-
-" don't give |ins-completion-menu| messages.
-"set shortmess+=c
-
-" Use tab for trigger completion with characters ahead and navigate.
-" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
-" Coc only does snippet and additional edit on confirm.
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-
-" Remap keys for gotos
-nmap <leader>gd <Plug>(coc-definition)
-nmap <leader>gy <Plug>(coc-type-definition)
-nmap <leader>gi <Plug>(coc-implementation)
-nmap <leader>gr <Plug>(coc-references)
-nmap <leader>gf :<C-u>CocList -I symbols<cr>
-" coc.vim settings end
-
 """""""""""""""" plugin shortcut settings end """""""""""""""""""""""""""""""""
 
